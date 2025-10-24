@@ -5,44 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Criptografía RSA</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <header>
-    <h1>Criptografía RSA</h1>
+    <div class="header-content">
+      <h1>Criptografía RSA</h1>
+      <p>Seguridad digital basada en la criptografía asimétrica</p>
+    </div>
   </header>
 
   <main>
-
-    <section id="resumen">
-      <h2>¿Qué es el algoritmo RSA?</h2>
-      <p>
-        RSA es un sistema criptográfico asimétrico que se basa en la dificultad de factorizar números grandes en sus factores primos.
-      </p>
+    <!-- Sección de Introducción -->
+    <section class="intro">
+      <div class="intro-text">
+        <h2>¿Qué es RSA?</h2>
+        <p>
+          RSA es un sistema criptográfico asimétrico que se basa en la dificultad de factorizar números grandes en sus factores primos. 
+          Permite cifrar y descifrar información de manera segura usando un par de claves: pública y privada.
+        </p>
+      </div>
+      <div class="intro-image">
+      <img src="img/seguridad-digital.jpg" alt="Seguridad digital">
+      </div>
     </section>
 
-    <section id="metodologia">
-      <h2>Metodología</h2>
-      <ol>
-        <li>Generación de claves (p, q, n, φ, e, d)</li>
-        <li>Cifrado con la clave pública</li>
-        <li>Descifrado con la clave privada</li>
-      </ol>
+    <!-- Sección de Metodología -->
+    <section class="cards-section">
+      <h2>Metodología RSA</h2>
+      <div class="cards-container">
+        <div class="card">
+          <h3>Generación de claves</h3>
+          <p>Se eligen dos números primos grandes <b>p</b> y <b>q</b>, se calcula <b>n = p*q</b> y el indicador de euler <b>φ(n)</b>. Luego se elige <b>e</b> y <b>d</b>.</p>
+        </div>
+        <div class="card">
+          <h3>Cifrado</h3>
+          <p>Se utiliza la clave pública <b>(n, e)</b> para convertir el mensaje en un número cifrado mediante exponenciación modular.</p>
+        </div>
+        <div class="card">
+          <h3>Descifrado</h3>
+          <p>Se utiliza la clave privada <b>(n, d)</b> para recuperar el mensaje original del cifrado.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="explicacion">
-      <h2>Explicación del funcionamiento</h2>
-      <p>
-        RSA se fundamenta en la dificultad de factorizar un número grande en dos primos. 
-        En dicho sistema la clave pública se modela bajo los valores (n, e), mientras que la clave privada en (n, d). 
-        Cifrar el mensaje involucra elevarlo a la potencia <i>e</i> módulo <i>n</i>; 
-        descifrar es elevarlo a <i>d</i> módulo <i>n</i>.
-      </p>
-    </section>
-
-    <section id="simulador">
+    <!-- Sección de Simulador -->
+    <section class="simulador">
       <h2>Simulador RSA</h2>
-      <p>Escribe un mensaje para simular el procedimiento de cifrado y descifrado:</p>
+      <p>Escribe un mensaje para simular el cifrado y descifrado:</p>
 
       <div class="simulador-box">
         <input type="text" id="mensaje" placeholder="Escribe tu mensaje aquí">
@@ -52,23 +63,38 @@
         </div>
       </div>
 
-      <p><strong>Cifrado:</strong> <span id="cifrado"></span></p>
-      <p><strong>Descifrado:</strong> <span id="descifrado"></span></p>
+      <div class="resultado">
+        <p><strong>Cifrado:</strong> <span id="cifrado"></span></p>
+        <p><strong>Descifrado:</strong> <span id="descifrado"></span></p>
+      </div>
     </section>
 
-    <section id="aplicaciones">
-      <h2>Aplicaciones</h2>
-      <ul>
-        <li>Firmas digitales y autenticación</li>
-        <li>Protocolos HTTPS y certificados SSL</li>
-        <li>Seguridad en banca electrónica</li>
-        <li>Protección de correos y mensajes</li>
-      </ul>
+    <!-- Sección de Aplicaciones -->
+    <section class="aplicaciones">
+      <h2>Aplicaciones de RSA</h2>
+      <div class="cards-container">
+        <div class="card">
+          <h3>Firmas digitales</h3>
+          <p>Garantizan autenticidad y veracidad en documentos y mensajes.</p>
+        </div>
+        <div class="card">
+          <h3>HTTPS y SSL</h3>
+          <p>Protege la comunicación web asegurando datos en tránsito.</p>
+        </div>
+        <div class="card">
+          <h3>Banca electrónica</h3>
+          <p>Seguridad en transacciones y protección de cuentas de usuario.</p>
+        </div>
+        <div class="card">
+          <h3>Mensajería segura</h3>
+          <p>Cifrado de correos y mensajes para privacidad completa.</p>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>Autores: Julio S y Lesly Baltazar Alanoca | Facultad de Ciencias - Expociencia 2025</p>
+    <p>Autores: Julio y Lesly Baltazar Alanoca | Facultad de Ciencias - Expociencia 2025</p>
   </footer>
 
   <script src="script.js"></script>
