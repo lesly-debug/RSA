@@ -1,61 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Criptografía RSA</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <main>
-            <section id="resumen">
-                <h2>¿Qué es el algoritmo RSA?</h2>
-                <p>
-                   RSA es un sistema criptográfico asimétrico que se basa en la dificultad de factorizar números grandes en sus factores primos. 
-                </p>
-            </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criptografía RSA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-            <section id="metodologia">
-                <h2>Metodología</h2>
-                <ol>
-                    <li>Generación de claves (p, q, n, φ, e, d)</li>
-                    <li>Cifrado con la clave pública</li>
-                    <li>Descifrado con la clave privada</li>
-                </ol>
-            </section>
+  <header>
+    <h1>Criptografía RSA</h1>
+  </header>
 
-            <section id="explicacion">
-                <h2>Explicación del funcionamiento</h2>
-                <p>
-                    RSA se fundamenta en la dificultad de factorizar un numero grande en dos primos. En dicho sistema la clave pública se modela bajo los valores (n,e), mientras que la clave privada en (n,d). Cifrar el mensaje involucra elevarlo a la potencia <i>e</i> módulo <i>n</i>; descifrar es elevarlo a <i>d</i> módulo <i>n</i>.
-                </p>
-            </section>
+  <main>
 
-            <section id="simulador">
-                <h2>Simulador RSA</h2>
-                <p>Escribe un mensaje para simular el procedimiento de cifrado y descifrado</p>
-                <input type="text" id="mensaje" placeholder="Escribe tu mensaje aquí">
-                <button onclick="cifrar()">Cifrar</button>
-                <button onclick="descifrar()">Descifrar</button>
+    <section id="resumen">
+      <h2>¿Qué es el algoritmo RSA?</h2>
+      <p>
+        RSA es un sistema criptográfico asimétrico que se basa en la dificultad de factorizar números grandes en sus factores primos.
+      </p>
+    </section>
 
-                <p><strong>Cifrado:</strong> <span id="cifrado"></span></p>
-                <p><strong>Descifrado:</strong> <span id="descifrado"></span></p>
-            </section>
+    <section id="metodologia">
+      <h2>Metodología</h2>
+      <ol>
+        <li>Generación de claves (p, q, n, φ, e, d)</li>
+        <li>Cifrado con la clave pública</li>
+        <li>Descifrado con la clave privada</li>
+      </ol>
+    </section>
 
-            <section id="aplicaciones">
-            <h2>Aplicaciones del RSA</h2>
-            <ul>
-            <li>Firmas digitales y autenticación</li>
-            <li>Protocolos HTTPS y certificados SSL</li>
-            <li>Seguridad en banca electrónica</li>
-            <li>Protección de correos y mensajes</li>
-            </ul>
-            <footer>
-            <p>Autores: Julio SD y Lesly Baltazar Alanoca | Facultad de Ciencias - Expociencia 2025</p>
-            </footer>
-            </section>
+    <section id="explicacion">
+      <h2>Explicación del funcionamiento</h2>
+      <p>
+        RSA se fundamenta en la dificultad de factorizar un número grande en dos primos. 
+        En dicho sistema la clave pública se modela bajo los valores (n, e), mientras que la clave privada en (n, d). 
+        Cifrar el mensaje involucra elevarlo a la potencia <i>e</i> módulo <i>n</i>; 
+        descifrar es elevarlo a <i>d</i> módulo <i>n</i>.
+      </p>
+    </section>
 
+    <section id="simulador">
+      <h2>Simulador RSA</h2>
+      <p>Escribe un mensaje para simular el procedimiento de cifrado y descifrado:</p>
 
-        </main>
-    </body>
+      <div class="simulador-box">
+        <input type="text" id="mensaje" placeholder="Escribe tu mensaje aquí">
+        <div class="botones">
+          <button onclick="cifrar()">Cifrar</button>
+          <button onclick="descifrar()">Descifrar</button>
+        </div>
+      </div>
+
+      <p><strong>Cifrado:</strong> <span id="cifrado"></span></p>
+      <p><strong>Descifrado:</strong> <span id="descifrado"></span></p>
+    </section>
+
+    <section id="aplicaciones">
+      <h2>Aplicaciones</h2>
+      <ul>
+        <li>Firmas digitales y autenticación</li>
+        <li>Protocolos HTTPS y certificados SSL</li>
+        <li>Seguridad en banca electrónica</li>
+        <li>Protección de correos y mensajes</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Autores: Julio S y Lesly Baltazar Alanoca | Facultad de Ciencias - Expociencia 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
